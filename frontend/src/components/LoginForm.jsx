@@ -19,7 +19,7 @@ function LoginForm({ login }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:4000/login", {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

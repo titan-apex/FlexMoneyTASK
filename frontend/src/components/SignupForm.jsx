@@ -25,7 +25,7 @@ function SignupForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:4000/register", {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -126,6 +126,17 @@ function SignupForm() {
             <option value="8AM-9AM">8AM-9AM</option>
             <option value="5PM-6PM">5PM-6PM</option>
           </Select>
+        </FormControl>
+        <FormControl marginBottom="21px">
+          <FormLabel>Name</FormLabel>
+          <Input
+            placeholder="Card Number"
+            type="text"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
         </FormControl>
 
         <Button colorScheme="teal" type="submit">

@@ -1,5 +1,4 @@
 import { Button } from "@chakra-ui/react";
-import { useEffect } from "react";
 import { useState } from "react";
 import ChangeBatch from "./ChangeBatch";
 import LoginForm from "./LoginForm";
@@ -10,13 +9,6 @@ const HomePage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleClick = (whichForm) => setForm(whichForm);
-
-  useEffect(() => {
-    fetch("http://localhost:4000")
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
-  }, []);
 
   return (
     <>

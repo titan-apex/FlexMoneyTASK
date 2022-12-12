@@ -14,7 +14,7 @@ function ChangeBatch() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = localStorage.getItem("userEmail");
-    fetch("http://localhost:4000/updatebatch", {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/updatebatch`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
