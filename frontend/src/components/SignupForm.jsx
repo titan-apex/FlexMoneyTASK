@@ -127,17 +127,6 @@ function SignupForm() {
             <option value="5PM-6PM">5PM-6PM</option>
           </Select>
         </FormControl>
-        <FormControl marginBottom="21px">
-          <FormLabel>Name</FormLabel>
-          <Input
-            placeholder="Card Number"
-            type="text"
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-          />
-        </FormControl>
 
         <Button colorScheme="teal" type="submit">
           Sign Up!
